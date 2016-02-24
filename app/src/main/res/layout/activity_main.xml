@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/main_choose_person_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/main_choose_person_btn" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/main_choose_person_btn"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.lorentzos.flingswipe.SwipeFlingAdapterView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/main_swipe_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:max_visible="4"
+            app:min_adapter_stack="6"
+            app:rotation_degrees="16"
+            tools:visibility="gone" />
+
+        <TextView
+            android:id="@+id/main_swipe_view_last"
+            android:layout_width="150dp"
+            android:layout_height="210dp"
+            android:layout_gravity="center"
+            android:background="@drawable/menu_card_bg"
+            android:gravity="center"
+            android:text="피자"
+            android:textColor="@android:color/white"
+            android:textSize="40sp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/main_choose_menu_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily=""
+        android:text="뭐먹지?"
+        android:visibility="gone" />
+
+</RelativeLayout>
